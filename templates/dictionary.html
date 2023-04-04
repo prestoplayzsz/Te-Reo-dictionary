@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block heading %}Dictionary{% endblock %}
+
+{% block main %}
+    <div class="dictionary">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Maori</th>
+                <th>English</th>
+                <th>Category</th>
+                <th>Definition</th>
+                <th>Level</th>
+            </tr>
+            {% for word in dictionary %}
+                <tr>
+                    <th>{{ word[0] }}</th>
+                    <th>{{ word[1] }}</th>
+                    <th>{{ word[2] }}</th>
+                    <th>{{ word[3] }}</th>
+                    <th>{{ word[4] }}</th>
+                    <th>{{ word[5] }}</th>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}
