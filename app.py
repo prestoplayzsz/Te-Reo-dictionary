@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, app
+from flask import Flask, render_template, app
 
 
 @app.route('/')
