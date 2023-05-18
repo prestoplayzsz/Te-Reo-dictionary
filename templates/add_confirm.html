@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block heading %}Confirm Add{% endblock %}
+
+{% block main %}
+    <h3>Are you sure you want to add {{ type }} {{ name }}?
+    <a href="/add_{{ type }}_confirm/{{ name }}, {{ name1 }}, {{ name2 }}, {{ name3 }}">Yes</a> /
+    <a href="/admin">No</a></h3>
+{% endblock %}

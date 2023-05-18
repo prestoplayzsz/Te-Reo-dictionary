@@ -23,7 +23,19 @@
 			<span></span>
 			<ul>
                 <li><a href="\">Home</a></li>
-				<li><a href="\dictionary">Dictionary</a></li>
+				<li><a href="\dictionary\<cat_id>">Dictionary</a></li>
+				<li><a href="\signup">Sign up</a></li>
+				{% if logged_in %}
+				<li><a href="\logout">Logout</a></li>
+				{% elif is_admin %}
+				<li><a href="\admin">Admin</a></li>
+				{% else %}
+				<li><a href="\login">Login</a></li>
+				{% endif %}
+				<li>Categories</li>
+				{% for category in categories %}
+				<li><a href="/dictionary/{{ category[0] }}">{{ category[1] }}</a></li>
+				{% endfor %}
 
 			</ul>
 		</nav>
